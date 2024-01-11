@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*, *::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Outfit', sans-serif;
+}
+/* ==== MOBILE VIEW ==== */
+/* ==== Navbar start ==== */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343840;
+    padding: 15px 20px;
+    border-radius: 0 0 5px 5px;   
+}
+nav .menu {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+}
+nav h3{
+    display: none;
+}
+nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+}
+nav label {
+    display: inline-flex;
+    cursor: pointer;
+    color: white;
+}
+nav #toggle:checked ~ .menu {
+    height: 100%;
+}
+nav #toggle {
+    display: none;
+}
+.logo img{
+    width: 90px;
+}
+/* ==== Navbar end ==== */
+/* ==== Container start ==== */
+.title{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around; 
+    padding: 10px;
+}
+.title h1{
+    font-size: 18px;
+    padding: 20px;
+}
+.title a{
+    color: black;
+}
+.logoutBtn{
+    display: none;
+}
+.logoutBtn>a {
+    color: white;
+}
+.logoutBtn>p{
+    margin-bottom: 20px;
+}
+.avatarBtn:hover .logoutBtn{
+    display: block;
+    position: absolute;
+    box-shadow: 0px 0px 10px lightgray;
+    padding: 15px;
+    background: white;
+    border-radius: 5px;
+    text-align: left;
+    margin: 10px;
+    z-index: 1;
+}
+.content{
+    padding: 0px 20px;
+    margin-bottom: 150px;
+}
+
+.card{
+    margin-top: 20px;
+    width: 100%;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px lightgray;
+    font-size: 14px;
+}
+.card a{
+    color: black;
+}
+.greenBtn{
+    background: #1DA15D;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+.btn{
+    margin-top: 10px;
+}
+.blueBtn{
+    background: #3CA4EC;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+.redBtn{
+    background: #FC0424;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+.infos{
+    margin: 20px 0px;
+    gap: 10px;
+}
+.field{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+input{
+    padding: 15px;
+    font-size: 15px;
+}
+select{
+    font-size: 15px;
+    padding: 15px;
+    border: none;
+    
+}
+.select{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 35px;
+    background: white;
+}
+.submitBtn{
+    width: 200px;
+    height: 30px;
+}
+/* ==== Footer Start ==== */
+footer{
+    font-size: 10px;
+    text-align: center;
+    background: #22262e;
+    width: 100%;
+    padding: 15px 0px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
+/* ==== DESKTOP VIEW ==== */
+@media screen and (min-width: 1280px) {
+    .header{
+        width: 15%;
+        height: 100%;
+        background: #343840;
+        position: fixed;
+        font-size: 13px;
+    }
+    nav h3{
+        display: block;
+        margin-top: 30px;
+    }
+    .header ul {
+        list-style-type: none;
+    }
+    .navbar{
+        margin-top: 50px;
+        color: white;
+        display: block;
+    }
+    .logo{
+        margin-left: 10%;
+    }
+
+    .logo img{
+        width: 150px;
+    }
+    .navbar h3{
+        font-weight: 500;
+    }
+    .navbar li {
+        margin-top: 20px;
+    }
+    .navbar a{
+        text-decoration: none;
+        color: gray;
+        font-weight: 300;
+    }
+    .navbar a:hover{
+        color: white;
+    }
+    nav .menu {
+        height: 100%;
+        overflow: visible;
+    }
+    nav label {
+        display: none;
+    }
+    .container{
+        margin-left: 15%;
+    }
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: 20%;
+        
+    }
+    .title h1{
+        padding: 50px;
+        margin-left: 50px;
+    }
+    .title a{
+        color: black;
+    }
+    .content{
+        padding: 0px 40px;
+        margin-bottom: 100px;
+    }
+    
+    footer{
+        height: 80px;
+        font-size: 15px;
+    }
+    footer h4{
+        margin-left: -240px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .card{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .btn{
+        display: flex;
+        margin:auto;
+        gap: 10px;
+    }
+}
